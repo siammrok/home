@@ -140,13 +140,19 @@ ul {
   line-height: 1.5;
 }
 
+.company-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .company-details {
-  margin: 0.65rem 0 0;
+  margin: 0;
   display: grid;
-  gap: 0.3rem;
-  color: #d9d9d9;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  gap: 0.15rem;
+  color: #a8a8a8;
+  line-height: 1.3;
+  font-size: 0.8rem;
 }
 
 .detail-line {
@@ -157,7 +163,7 @@ ul {
 
 .detail-label {
   white-space: nowrap;
-  color: #b8b8b8;
+  color: #888888;
   font-weight: 500;
   width: 5.5rem;
   text-align: right;
