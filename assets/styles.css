@@ -1,0 +1,186 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: #000000;
+  color: #f2f2f2;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.business-card {
+  width: min(820px, 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: clamp(1.6rem, 4vw, 3rem);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 2rem;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: clamp(1rem, 4vw, 3rem);
+  right: clamp(0.5rem, 4vw, 3rem);
+  margin: 0;
+  padding: clamp(0.6rem, 1.5vw, 1rem);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: clamp(1rem, 10vw, 20rem);
+  width: auto;
+  display: block;
+}
+
+.service {
+  margin: 0.5rem 0 0;
+  color: #d4d4d4;
+  font-size: clamp(1rem, 2.3vw, 1.35rem);
+}
+
+header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.features-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+  color: #d4d4d4;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.contacts-block {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.phone-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #ffffff;
+  color: #050505;
+  text-decoration: none;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 800;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+}
+
+.phone-button:hover,
+.phone-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.28);
+  outline: none;
+}
+
+.contact-line {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-line a {
+  color: #f2f2f2;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+section h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #dddddd;
+}
+
+ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+  color: #d9d9d9;
+  line-height: 1.5;
+}
+
+.company-details {
+  margin: 0.65rem 0 0;
+  display: grid;
+  gap: 0.3rem;
+  color: #d9d9d9;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.detail-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+}
+
+.detail-label {
+  white-space: nowrap;
+  color: #b8b8b8;
+  font-weight: 500;
+  width: 5.5rem;
+  text-align: right;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+  }
+
+  .business-card {
+    border-radius: 18px;
+  }
+
+  .phone-button {
+    width: 100%;
+  }
+}
