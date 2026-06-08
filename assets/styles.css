@@ -237,6 +237,11 @@ ul {
     line-height: 1.35;
   }
 
+  /* Keep the equipment list as a single column (items are long) */
+  section[aria-labelledby="equipment"] ul {
+    grid-template-columns: 1fr;
+  }
+
   .contacts-block {
     gap: 0.6rem;
   }
